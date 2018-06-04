@@ -1,0 +1,95 @@
+body {
+    margin: 0px;
+}
+
+.sidebar {
+    grid-area: sidebar;
+}
+
+.content {
+    grid-area: content;
+    position: relative;
+}
+
+.header {
+    grid-area: header;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+.wrapper {
+    max-width: 1250px;
+    min-height: 100vh;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 10px;
+    background-color: #fff;
+    color: #444;
+    grid-template-columns: 250px auto auto 250px;
+    grid-template-rows: 100px auto 100px;
+    grid-template-areas: "header  header  header header" "sidebar content content sidebar2" "footer  footer  footer footer";
+}
+
+@media only screen and (max-width: 600px) {
+    .header:after {
+        content: ' max-width: 600px'
+    }
+    .wrapper {
+        grid-template-rows: 100px 100px 100px auto 100px;
+        grid-template-columns: 1fr;
+        grid-template-areas: "header" "sidebar" "sidebar2" "content" "footer";
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .header:after {
+        content: ' min-width: 600px'
+    }
+    .wrapper {
+        grid-template-rows: 100px 100px auto 100px;
+        grid-template-columns: 2fr 2fr;
+        grid-template-areas: "header  header" "sidebar  sidebar2" "content content" "footer footer";
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .header:after {
+        content: ' min-width: 768px'
+    }
+    .wrapper {
+        grid-template-columns: 250px auto;
+        grid-template-rows: 100px auto auto 100px;
+        grid-template-areas: "header  header" "sidebar content" "sidebar2 content" "footer  footer";
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .header:after {
+        content: ' min-width: 992px'
+    }
+    .wrapper {
+        grid-template-columns: 250px auto auto 250px;
+        grid-template-rows: 100px auto 100px;
+        grid-template-areas: "header  header  header header" "sidebar content content sidebar2" "footer  footer  footer footer";
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .header:after {
+        content: ' min-width: 1200px'
+    }
+}
+
+.box {
+    background-color: #444;
+    color: #fff;
+    padding: 50px;
+    font-size: 150%;
+}
+
+.header,
+.footer {
+    background-color: #999;
+}

@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+div.wrapper {
+    width: 1080px;
+    background: #ccc;
+    margin: 0 auto;
+    height: 100vh;
+}
+
+header {
+    padding: 25px;
+    background: teal;
+}
+
+div.content {
+    display: flex;
+    flex-direction: row;
+    height: 800px;
+}
+
+aside {
+    padding: 25px;
+    background: palevioletred;
+    width: 250px;
+}
+
+main {
+    padding: 25px;
+    background: skyblue;
+    flex-grow: 1;
+}
+
+footer {
+    padding: 25px;
+    background: rgb(18, 20, 20);
+    clear: both;
+    color: #ccc;
+}
